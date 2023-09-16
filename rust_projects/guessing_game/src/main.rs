@@ -1,5 +1,5 @@
 use std::io;
-
+// this is a comment
 fn main() {
     println!("Guess the number!");
 
