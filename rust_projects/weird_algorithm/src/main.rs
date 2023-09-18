@@ -22,7 +22,22 @@ fn main() {
     // uncomment this^ when you figure it out
     // use a loop to check if even, odd, or equal to 1
     // append each term to an array then print the array
+    // maybe move the input part into the loop?
     loop {
 
+        let input_n: u32 = match input_n.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        if let 0 = input_n % 2 {
+            println!("Even");
+            break;
+        }
+        else {
+            println!("Odd");
+            break;
+        };
     }
+
 }
