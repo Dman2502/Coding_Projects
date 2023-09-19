@@ -14,42 +14,24 @@ fn main() {
     // use a loop to check if even, odd, or equal to 1
     // append each term to an array then print the array
     // maybe move the input part into the loop?
-    let mut input_n = String::new();
-
+    
     loop {
-        
+        let mut input_n = String::new();
 
         io::stdin()
             .read_line(&mut input_n)
             .expect("Failed to read line");
 
-        println!("You entered: {input_n}");
+        println!("You input {input_n}");
 
-        let input_n: u32 = match 
-        input_n.trim().parse() {
+        let mut input_n = match input_n.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
 
-    let mut count = input_n;    
-    
-        loop {
-            let mut number = 
-
-                if count % 2 == 0 {
-                    count / 2 ;
-                    continue;
-                }
-                else if count % 2 == 1 {
-                    (count *3 ) - 1;
-                    continue;
-                }
-                else if count == 1 {
-                    println!("complete");
-                    break;
-                };
+        while input_n > 1 {
 
         }
-    }
 
+    }
 }
