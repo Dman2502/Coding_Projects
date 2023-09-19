@@ -9,35 +9,47 @@ use std::io;
 fn main() {
     println!("Weird Algorithm!");
     
-    // create 
-    let mut input_n = String::new();
-
-    io::stdin()
-        .read_line(&mut input_n)
-        .expect("Failed to read line");
-
-    println!("You entered: {input_n}");
-    
     // let sequence: [u32; 0] = [];
     // uncomment this^ when you figure it out
     // use a loop to check if even, odd, or equal to 1
     // append each term to an array then print the array
     // maybe move the input part into the loop?
-    loop {
+    let mut input_n = String::new();
 
-        let input_n: u32 = match input_n.trim().parse() {
+    loop {
+        
+
+        io::stdin()
+            .read_line(&mut input_n)
+            .expect("Failed to read line");
+
+        println!("You entered: {input_n}");
+
+        let input_n: u32 = match 
+        input_n.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
 
-        if let 0 = input_n % 2 {
-            println!("Even");
-            break;
+    let mut count = input_n;    
+    
+        loop {
+            let mut number = 
+
+                if count % 2 == 0 {
+                    count / 2 ;
+                    continue;
+                }
+                else if count % 2 == 1 {
+                    (count *3 ) - 1;
+                    continue;
+                }
+                else if count == 1 {
+                    println!("complete");
+                    break;
+                };
+
         }
-        else {
-            println!("Odd");
-            break;
-        };
     }
 
 }
